@@ -19,6 +19,31 @@ function woodCalculator(chair, table, bed){
  let woodresult= woodCalculator(1,2,1)
  console.log(woodresult);
 
+
+// /brickCalculator
+function brickCalculator(floor){
+
+    let brick = 0; 
+    if (floor <=10){
+         brick = floor *15*1000;
+          } else if (floor <=20){
+            let firstPart = 10 * 15 * 1000 ;
+            let remaining = floor - 10;
+            let secondPart = remaining * 12 * 1000;
+            brick = firstPart + secondPart;
+          }
+          else{
+              let firstPart = 10*15*1000 ;
+              let secondPart = 10*12*1000;
+              let remaining = floor-20;
+              let thirdPart = remaining * 10*1000;
+              brick = firstPart+secondPart+thirdPart 
+          }
+          return brick;
+        }
+        let brickTotal = brickCalculator(32)
+        console.log (brickTotal);
+
 //tinyFriend
 function tinyFriend(names){
     let smallest = names[0];
